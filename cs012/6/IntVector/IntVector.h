@@ -1,0 +1,36 @@
+#ifndef INTVECTOR_H
+#define INTVECTOR_H
+
+class IntVector {
+    private: 
+        unsigned sz;  //stores the size of the IntVector (the number of elements currently being used).
+        unsigned cap;  //store the size of the array
+        int *data;  //stores the address of the dynamically-allocated array of integers
+    public:
+        IntVector();
+        IntVector(unsigned size, int value = 0);
+        ~IntVector();
+        unsigned size() const;
+        unsigned capacity() const;
+        bool empty() const;
+        const int & at(unsigned index) const;
+        const int & front() const;
+        const int & back() const;
+        //second half  (program)
+        void insert(unsigned index, int value);
+        void erase(unsigned index);
+        void push_back(int value);
+        void pop_back();
+        void clear();
+        void resize(unsigned size, int value = 0);
+        void reserve(unsigned n);
+        void assign(unsigned n, int value);
+        int & at(unsigned index);
+        int & front( );
+        int & back( );
+    private:
+        void expand();
+        void expand(unsigned amount);
+};
+
+#endif
