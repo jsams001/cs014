@@ -1,0 +1,8 @@
+Code and file used here was for a homework problem in CS111 - Discrete 
+Mathematics. The problem concerns RSA encryption: the encrypted message is 
+located in the file simply named file, and the accompanying code reads each 
+individual number in that file and adds it to a vector in sequential order, left
+to right. Once we have the vector made, we run each individual element through 
+the decryption equation, and once we get a double variable, we convert that 
+double into a char to finally get Alice's original message.
+
